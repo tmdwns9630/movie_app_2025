@@ -1,3 +1,7 @@
+function Potato() {
+  return <h3>I love Potato</h3>;
+}
+
 function App() {
   return (
     <div className="App">
@@ -21,6 +25,7 @@ function App() {
       떨어진다. 조작감 논란이 있다. 방패가 있어야 기동력, 체급, 데미지가 산다.
       방패가 없는 에스텔은 물몸에, 뎀지도 부족하고, 기동력도 애매한 예쁜
       소방관눈나에 지나지 않는다.
+      <Potato />
     </div>
   );
 }
