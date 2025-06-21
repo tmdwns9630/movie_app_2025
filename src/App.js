@@ -85,6 +85,7 @@ function App() {
             rating={dish.rating}
           />
         ))}
+
         <Movie title={123} year="2025" />
       </div>
     </div>
