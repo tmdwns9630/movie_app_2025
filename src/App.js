@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import Movie from "./Movie";
 
 //음식 컴포넌트 본체
 function Food({ name, picture, rating }) {
@@ -12,6 +13,7 @@ function Food({ name, picture, rating }) {
   );
 }
 console.log(process.env.NODE_ENV);
+console.error("에러 확인");
 
 //배열 만들어서 적당한 데이터 추가.
 const foodILike = [
@@ -41,12 +43,13 @@ const foodILike = [
 
 //propTypes 사용. props의 타입 지정하기.
 Food.propTypes = {
-  name: PropTypes.number.isRequired,
+  name: PropTypes.number.isRequired, //일부러 틀린 숫자로
   picture: PropTypes.string.isRequired,
   rating: PropTypes.number.isRequired,
 };
 
 console.log(process.env.NODE_ENV);
+console.error("테스트 경고");
 
 //App 본체
 function App() {
@@ -83,6 +86,7 @@ function App() {
             rating={dish.rating}
           />
         ))}
+        <Movie title={123} year="2025" />
       </div>
     </div>
   );
