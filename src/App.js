@@ -1,3 +1,4 @@
+import React from "react";
 import PropTypes from "prop-types";
 import Movie from "./Movie";
 
@@ -12,8 +13,6 @@ function Food({ name, picture, rating }) {
     </div>
   );
 }
-console.log(process.env.NODE_ENV);
-console.error("에러 확인");
 
 //배열 만들어서 적당한 데이터 추가.
 const foodILike = [
@@ -43,7 +42,7 @@ const foodILike = [
 
 //propTypes 사용. props의 타입 지정하기.
 Food.propTypes = {
-  name: PropTypes.number.isRequired, //일부러 틀린 숫자로
+  name: PropTypes.bool.isRequired, // 일부러 틀리게
   picture: PropTypes.string.isRequired,
   rating: PropTypes.number.isRequired,
 };
