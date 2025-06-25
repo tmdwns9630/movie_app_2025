@@ -18,6 +18,8 @@ class App extends React.Component {
     }, 5000);
   }
 
+  //구조 분해 할당, this.state에서 isLoading을 먼저 빼옴.
+  //삼항 연산자로 로딩 상태 출력
   render() {
     console.log("render() 함수");
     const { isLoading } = this.state;
