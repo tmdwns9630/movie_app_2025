@@ -24,7 +24,29 @@ class App extends React.Component {
     }));
   };
 
+  //클래스형 컴포넌트가 생성될 때 호출하는 함수
+  constructor(props) {
+    super(props);
+    console.log("hello");
+  }
+
+  //컴포넌트가 처음 화면에 그려지면 실행되는 함수
+  componentDidMount() {
+    console.log("컴포넌트 Rendered");
+  }
+
+  //컴포넌트가 업데이트될 때만 발동하는 함수
+  componentDidUpdate() {
+    console.log("---I just Update-----");
+  }
+
+  //컴포넌트가 죽을 때 발동하는 함수
+  componentWillUnmount() {
+    console.log("마운트 해제");
+  }
+
   render() {
+    console.log("render() 함수");
     return (
       <div>
         <h1>나는 클래스 컴포넌트야</h1>
